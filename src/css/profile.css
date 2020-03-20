@@ -1,4 +1,5 @@
 .profile_img {
+  
   width: 150px;
 }
 .personal_info {
@@ -7,8 +8,9 @@
   flex-direction: column;
   justify-content: center;
 }
-.r_border {
+.borders {
   border-right: 1px solid #9da3b5;
+  border-left: 1px solid #9da3b5;
 }
 .margin_data {
   margin-top: 1.5rem;

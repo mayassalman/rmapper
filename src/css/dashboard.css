@@ -73,9 +73,8 @@ div.hidden{
   margin-top: 0.5rem;
 }
 
-.checkbox-group span{
-padding: 0px 5px
-}
 .checkbox-group label{
-  padding: 0px 2px
-  }
+padding: 0px 5px;
+width:90%;
+/* background-color: aqua; */
+}

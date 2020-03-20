@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { PageContext, AppContext } from "../state";
+import { PageContext, AppContext } from "../helpers/state";
 import { useTranslation } from "react-i18next";
 
 const DefaultSearch = () => {
@@ -69,6 +69,7 @@ const DefaultSearch = () => {
   );
 };
 const RelationSearch = () => {
+  
   const { t } = useTranslation();
 
   const { state: appState } = useContext(AppContext);
@@ -93,22 +94,10 @@ const RelationSearch = () => {
   };
 
   return (
-    <div className="row m-2">
-      <div className="col-lg-12">
-        <h4 className="add_title ">
-          {t("RELATIONSHIP.VIEW_RELATIONSHIP")}
-          {/* عرض   <span> العلاقات </span>
-           بين 
-          <span> {appState.selectedPerson && appState.selectedPerson.name} </span>
-           و 
-          <span> {(appState.selectedFriend && appState.selectedFriend.name) || `الآخرين`} </span>
-        
-        */}
-        </h4>
-      </div>
-      <div className="col-lg-2 pr-6  m-0">
-        {/* {pageState.queryData} */}
-        <div className="col-lg-12 checkbox-group mt-3 pt-2 pl-10">
+    <div className="row r_border  m-1">
+      
+      <div className="col-lg-12  ">
+        <div className="col-lg-12 checkbox-group">
           <input
             type="checkbox"
             id="relation"
@@ -118,7 +107,7 @@ const RelationSearch = () => {
           />
           <label htmlFor="relation">{t("RELATIONSHIP.LEVEL_RELATION")}</label>
         </div>
-        <div className="col-lg-12 p-0 select m-0">
+        <div className="col-lg-12  select mb-2">
           <select
             name="depth"
             id="depth"
@@ -126,14 +115,13 @@ const RelationSearch = () => {
               setDepth(e.target.value);
             }}
           >
-
             <option value="1">{t("RELATIONSHIP.LEVEL_ONE")}</option>
             <option value="2">{t("RELATIONSHIP.LEVEL_TWO")}</option>
             <option value="3">{t("RELATIONSHIP.LEVEL_THREE")}</option>
           </select>
         </div>
       </div>
-      <div className="col-lg-6  checkbox-group mt-3 pt-2 pl-10">
+      <div className="col-lg-12  checkbox-group ">
         <span>
           <input type="checkbox" id="direct" onClick={e => updateFormData(e)} />
           <label htmlFor="direct"> {t("RELATIONSHIP.DIRECT")}</label>
@@ -180,11 +168,10 @@ const RelationSearch = () => {
             id="university"
             onClick={e => updateFormData(e)}
           />
-         <label htmlFor="university"> {t("RELATIONSHIP.UNIVERSITY")}</label>
+          <label htmlFor="university"> {t("RELATIONSHIP.UNIVERSITY")}</label>
         </span>
       </div>
-
-      <div className="col-lg-2 col-md-4 col-sm-4 mt-3">
+      <div className="col-lg-12 col-md-12 col-sm-12 mt-2">
         <div className="btn-bg bg-3">
           <div className="btnn btn-3">
             <button

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useContext } from "react";
-import { PageContext, AppContext } from "../state";
-import { useDataApi, Error, Loading, EmptyFetchingResult } from "./util.js";
+import { PageContext, AppContext } from "../helpers/state";
+import { useDataApi, Error, Loading, EmptyFetchingResult } from "../helpers/util";
 
 const PersonsList = ({ method, url }) => {
   const { state:pageState } = useContext(PageContext);

@@ -1,6 +1,6 @@
 import React from "react";
 import {  Link } from "react-router-dom";
-import { changeDirection } from "./documentsUtils";
+import { changeDirection } from "../helpers/documentsUtils";
 import { useTranslation } from "react-i18next";
 
 

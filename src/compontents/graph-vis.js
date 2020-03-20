@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useContext, useEffect } from "react";
 import Graph from "react-graph-vis";
-import { useDataApi, Error, Loading, EmptyFetchingResult } from "./util.js";
+import { useDataApi, Error, Loading, EmptyFetchingResult } from "../helpers/util";
 
-import { PageContext, AppContext } from "../state";
+import { PageContext, AppContext } from "../helpers/state";
 import { useTranslation } from "react-i18next";
 
 export const GraphVis = ({ method, url }) => {
@@ -34,13 +34,8 @@ export const GraphVis = ({ method, url }) => {
           });
         }
       }
-      setGraph({ nodes, edges });
-      
-    pageDispatch({
-      type: `SETDATA`,
-      newData:[]
-    })
   }
+  setGraph({ nodes, edges });
 
   }, [pageState.data]);
 
