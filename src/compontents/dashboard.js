@@ -21,7 +21,7 @@ const Dashboard = () => {
         method={"post"}
         url={`https://rmapper.infostrategic.com/service/persons/search/`}
       />
-      <ViewRelationShip method={"get"} />
+      <ViewRelationShip  />
       <AddFriend Id={3} />
       <AddPerson Id={4} />
     </Fragment>

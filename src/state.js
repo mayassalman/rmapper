@@ -41,7 +41,11 @@ let PageReducer = (state, action) => {
     case "SETSELECTEDRECORD":
       return { ...state, selectedRecord: action.newSelectedRecord };
       case "CLEAR":
-        return  PageInitialState;
+        return  {
+          queryData: "",
+          data: [],
+          selectedRecord: {}
+        };
     default:
       return;
   }

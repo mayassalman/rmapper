@@ -126,6 +126,7 @@ const RelationSearch = () => {
               setDepth(e.target.value);
             }}
           >
+
             <option value="1">{t("RELATIONSHIP.LEVEL_ONE")}</option>
             <option value="2">{t("RELATIONSHIP.LEVEL_TWO")}</option>
             <option value="3">{t("RELATIONSHIP.LEVEL_THREE")}</option>
@@ -209,9 +210,9 @@ const RelationSearch = () => {
                   type: `SETQUERYDATA`,
                   newQueryData: `pid1=${appState.selectedPerson.pid}${pid2}${types_}${depth_}`
                 });
-                console.log(
-                  `pid1=${appState.selectedPerson.pid}${pid2}${types_}${depth_}`
-                );
+                // console.log(
+                //   `pid1=${appState.selectedPerson.pid}${pid2}${types_}${depth_}`
+                // );
               }}
             >
               <label> {t("SEARCH.SEARCH")}</label>

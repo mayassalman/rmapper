@@ -44,7 +44,7 @@ export const useDataApi = (method, url) => {
   const { state: pageState, dispatch: pageDispatch } = useContext(PageContext);
   const { state: appState, dispatch: appDispatch } = useContext(AppContext);
   useEffect(() => {
-    console.log('page changed',appState.selectedPage)
+    // console.log('page changed',appState.selectedPage)
     pageDispatch({
       type: `CLEAR`
     });

@@ -7,11 +7,11 @@ import { useTranslation } from "react-i18next";
 
 export const GraphVis = ({ method, url }) => {
   const [graph, setGraph] = useState({ nodes: [], edges: [] });
-  const { state: pageState } = useContext(PageContext);
+  const { state: pageState ,dispatch:pageDispatch} = useContext(PageContext);
   const { state: appState } = useContext(AppContext);
 
   const [{ isLoading, isError, isEmpty }] = useDataApi(method, url);
-
+  
   useEffect(() => {
     let data = pageState.data;
 
@@ -35,10 +35,13 @@ export const GraphVis = ({ method, url }) => {
         }
       }
       setGraph({ nodes, edges });
-      // pageDispatch({
-      //   type: `CLEAR`,
-      // });
-    }
+      
+    pageDispatch({
+      type: `SETDATA`,
+      newData:[]
+    })
+  }
+
   }, [pageState.data]);
 
   const options = {

@@ -4,9 +4,9 @@ import { PageProvider,  AppContext } from "../state";
 import { RelationSearch } from "./search";
 import { GraphVis } from "./graph-vis";
 
-export const ViewRelationShip = ({ method }) => {
+export const ViewRelationShip = () => {
   const { state: appState } = useContext(AppContext);
-  
+  const method="get"
   const url=appState.selectedPage===2?
         `https://rmapper.infostrategic.com/service/search/single?`
         :
