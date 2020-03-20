@@ -1,0 +1,83 @@
+.profile_img {
+  width: 150px;
+}
+.personal_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.r_border {
+  border-right: 1px solid #9da3b5;
+}
+.margin_data {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+.profile_btn {
+  margin-top: 3rem;
+}
+.btn-3 button{
+  text-align: center;
+}
+.one .btn-bg.bg-3 .btn-3 button {
+  font-size: 14px;
+  background: #3e4a6e;
+  width: 195px;
+  padding: 15px;
+  float: right;
+}
+
+.one .btn-bg.bg-3 .btn-3 button:after {
+  background-color: #3e4a6e;
+}
+.one .btn-bg.bg-3 .btn-3 button:hover {
+  background: white;
+  color: #3e4a6e;
+}
+
+.two .btn-bg.bg-3 .btn-3 button {
+  font-size: 14px;
+  background: #9da3b5;
+  width: 195px;
+  padding: 15px;
+  float: right;
+}
+
+.two .btn-bg.bg-3 .btn-3 button:hover {
+  background: white;
+  color: #9da3b5;
+}
+
+.two .btn-bg.bg-3 .btn-3 button:after {
+  background-color: #9da3b5;
+}
+
+.profile_title {
+  margin: 0.5rem;
+}
+
+.display_info {
+  display: grid;
+  padding: 32px;
+}
+
+.icon_info {
+  color: #3e4a6e;
+}
+
+.content_info {
+  font-size: 20px;
+  color: #7c7e82;
+}
+
+.content_title_info {
+  font-size: 17px;
+  color: #86878b;
+  font-weight: 600;
+}
+
+.profile_name {
+  font-size: 20px;
+  font-weight: 600;
+}

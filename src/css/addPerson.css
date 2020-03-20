@@ -1,0 +1,280 @@
+/*= Reset CSS 
+============= */
+
+/*= input focus effects css
+=========================== */
+:focus {
+  outline: none !important;
+}
+
+.col-3 {
+  float: left;
+  width: 27.33%;
+  margin: 40px 3%;
+  position: relative;
+} /* necessary to give position: relative to parent. */
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-9 {
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  transition: 0.4s;
+}
+
+.effect-9 ~ .focus-border:before,
+.effect-9 ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.effect-9 ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  transition-delay: 0.6s;
+}
+.effect-9 ~ .focus-border i:before,
+.effect-9 ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.2s;
+}
+.effect-9 ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+.effect-9:focus ~ .focus-border:before,
+.effect-9:focus ~ .focus-border:after {
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+.effect-9:focus ~ .focus-border:after {
+  transition-delay: 0.2s;
+}
+.effect-9:focus ~ .focus-border i:before,
+.effect-9:focus ~ .focus-border i:after {
+  height: 100%;
+  transition: 0.2s;
+}
+.effect-9:focus ~ .focus-border i:after {
+  transition-delay: 0.4s;
+}
+
+/*-----------------------------*/
+.add_title {
+  font-size: 2.5rem;
+  color: #3e4a6e;
+  padding: 10px;
+}
+
+.add_title span {
+  color: #288fce;
+}
+
+/*----------------*/
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #ffffff;
+  background-image: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+div.select:hover {
+  border-color: #288fce;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 2.7em;
+  line-height: 2.6;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 1px;
+  border: 1px solid #ccc;
+}
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: #969696;
+  cursor: pointer;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #3399ff;
+  padding: 0 1em;
+  background: #ffffff;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.select:hover::after {
+  color: #288fce;
+}
+
+/*----------------- effect20*/
+.effect-20 ~ .focus-border:before,
+.effect-20 ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.3s;
+}
+.effect-20 ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+.effect-20 ~ .focus-border i:before,
+.effect-20 ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+.effect-20 ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+.effect-20:focus ~ .focus-border:before,
+.effect-20:focus ~ .focus-border:after,
+.has-content.effect-20 ~ .focus-border:before,
+.has-content.effect-20 ~ .focus-border:after {
+  width: 100%;
+  transition: 0.3s;
+}
+.effect-20:focus ~ .focus-border i:before,
+.effect-20:focus ~ .focus-border i:after,
+.has-content.effect-20 ~ .focus-border i:before,
+.has-content.effect-20 ~ .focus-border i:after {
+  height: 100%;
+  transition: 0.4s;
+}
+.effect-20 ~ label {
+  position: absolute;
+  right: 15px;
+  left: 15px;
+  width: 100%;
+  top: 10px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.effect-20:focus ~ label,
+.has-content.effect-20 ~ label {
+  top: -18px;
+  right:  50;
+  font-size: 12px;
+  color: #3399ff;
+  transition: 0.3s;
+}
+.effect-19,
+.effect-20 {
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  transition: 0.4s;
+  background: transparent;
+}
+
+/*-----button---------*/
+
+.btn-bg.bg-3 .btn-3 button {
+  color: #ffffff;
+  background: #288fce;
+  border: none;
+  transition: all 1s ease;
+  float: right;
+}
+.btn-bg.bg-3 .btn-3 button:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  background: transparent;
+  color: #288fce;
+}
+.btn-bg.bg-3 .btn-3 button:hover:after {
+  transition: all 0.3s ease;
+  width: 100%;
+  left: 0;
+}
+.btn-bg.bg-3 .btn-3 button:after {
+  position: absolute;
+  transition: all 0.3s ease;
+  content: "";
+  width: 0;
+  bottom: 0;
+  left: inherit;
+  right: 0;
+  height: 3px;
+  background: #288fce;
+}
+
+.btnn.btn-3 {
+  margin: 0 auto 0px auto;
+  display: block;
+}
+
+.btn-3 > button {
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #fff;
+  position: relative;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  text-transform: uppercase;
+
+  font-size: 1.3em;
+}
